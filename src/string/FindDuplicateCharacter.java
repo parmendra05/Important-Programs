@@ -24,6 +24,12 @@ public class FindDuplicateCharacter {
 		for(char ch:charSet) {
 			if(hm.get(ch) >1) System.out.println(ch+" :"+hm.get(ch)+" times");
 		}
+		
+		// for only one occurance
+		System.out.println("Only one occurance are :");
+		for(char ch:charSet) {
+			if(hm.get(ch) ==1) System.out.println(ch+" :"+hm.get(ch)+" times");
+		}
 	}
 
 }
