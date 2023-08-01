@@ -21,7 +21,7 @@ public class Check_Prime {
 
 		boolean value = isPrime(input);
 
-		if (value == true)
+		if (value)
 			System.out.println("Prime value");
 		else
 			System.out.println("Not a Prime value");
