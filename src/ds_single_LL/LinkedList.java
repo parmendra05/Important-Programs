@@ -22,7 +22,7 @@ public class LinkedList {
 
 	public void fetchData() {
 		ListNode currentNode = head;
-		while (currentNode.getNext() != null) {
+		while (currentNode != null) {
 			System.out.println(currentNode.getData() + " - " + currentNode.getNext());
 			currentNode = currentNode.getNext();
 		}
