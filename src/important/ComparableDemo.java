@@ -1,6 +1,7 @@
 package important;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ComparableDemo {
@@ -14,11 +15,18 @@ public class ComparableDemo {
 		empList.add(new Employee(5214, "joya", 31000));
 		empList.add(new Employee(1254, "nyra", 65000));
 
+		// Printing without sorting
+		empList.forEach(System.out::println);
+
+		System.out.println("---------- Sorting using Comprable -----------");
+
+		Collections.sort(empList);
+		empList.forEach(System.out::println);
 	}
 
 }
 
-class Employee {
+class Employee implements Comparable<Employee> {
 	private Integer id;
 	private String name;
 	private Integer salaray;
@@ -56,6 +64,12 @@ class Employee {
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", salaray=" + salaray + "]";
+	}
+
+	@Override
+	public int compareTo(Employee emp) {
+		// Sorting By Name
+		return this.name.compareTo(emp.name);
 	}
 
 }
