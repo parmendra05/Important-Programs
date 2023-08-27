@@ -1,6 +1,7 @@
 package important;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class ComparatorDemo {
@@ -23,13 +24,13 @@ public class ComparatorDemo {
 
 class Person {
 	private String name;
-	private Integer salaray;
+	private Integer salary;
 	private String city;
 
-	public Person(String name, Integer salaray, String city) {
+	public Person(String name, Integer salary, String city) {
 		super();
 		this.name = name;
-		this.salaray = salaray;
+		this.salary = salary;
 		this.city = city;
 	}
 
@@ -41,12 +42,12 @@ class Person {
 		this.name = name;
 	}
 
-	public Integer getSalaray() {
-		return salaray;
+	public Integer getSalary() {
+		return salary;
 	}
 
-	public void setSalaray(Integer salaray) {
-		this.salaray = salaray;
+	public void setSalary(Integer salary) {
+		this.salary = salary;
 	}
 
 	public String getCity() {
@@ -59,7 +60,7 @@ class Person {
 
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", salaray=" + salaray + ", city=" + city + "]";
+		return "Person [name=" + name + ", salary=" + salary + ", city=" + city + "]";
 	}
 
 }
