@@ -1,6 +1,7 @@
 package important;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -18,6 +19,40 @@ public class ComparatorDemo {
 		// Printing without sorting
 		persons.forEach(System.out::println);
 
+		System.out.println("---------- Sorting using Comprator -----------");
+
+		System.out.println("Sorting by Salary");
+		SalaryComparator salaryComparator = new SalaryComparator();
+
+		Collections.sort(persons, salaryComparator);
+		persons.forEach(System.out::println);
+
+		System.out.println("Sorting by City");
+		CityComparator cityComparator = new CityComparator();
+
+		Collections.sort(persons, cityComparator);
+		persons.forEach(System.out::println);
+	}
+
+}
+
+class SalaryComparator implements Comparator<Person> {
+
+	@Override
+	public int compare(Person p1, Person p2) {
+
+		// return Integer.compare(p1.getSalary(), p2.getSalary());
+		return p1.getSalary().compareTo(p2.getSalary());
+	}
+
+}
+
+class CityComparator implements Comparator<Person> {
+
+	@Override
+	public int compare(Person p1, Person p2) {
+
+		return p1.getCity().compareTo(p2.getCity());
 	}
 
 }
