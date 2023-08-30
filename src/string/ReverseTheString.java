@@ -1,5 +1,7 @@
 package string;
 
+import java.util.function.Function;
+
 public class ReverseTheString {
 	public static void main(String[] args) {
 
@@ -22,6 +24,11 @@ public class ReverseTheString {
 			output += str.charAt(i);
 
 		System.out.println(output);
+		
+		// Reverse the string by using Java 8 features
+       Function<String, StringBuffer> sbfun= myStr -> new StringBuffer(myStr).reverse();
+		
+		System.out.println(sbfun.apply("abcde"));
 	}
 
 }
