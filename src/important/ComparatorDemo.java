@@ -22,9 +22,9 @@ public class ComparatorDemo {
 		System.out.println("---------- Sorting using Comprator -----------");
 
 		System.out.println("Sorting by Salary");
-		SalaryComparator salaryComparator = new SalaryComparator();
-
-		Collections.sort(persons, salaryComparator);
+		
+		// Sorting using Lambda
+		Collections.sort(persons, (e1,e2) -> (int)e1.getSalary()-e2.getSalary());
 		persons.forEach(System.out::println);
 
 		System.out.println("Sorting by City");
@@ -36,16 +36,6 @@ public class ComparatorDemo {
 
 }
 
-class SalaryComparator implements Comparator<Person> {
-
-	@Override
-	public int compare(Person p1, Person p2) {
-
-		// return Integer.compare(p1.getSalary(), p2.getSalary());
-		return p1.getSalary().compareTo(p2.getSalary());
-	}
-
-}
 
 class CityComparator implements Comparator<Person> {
 
