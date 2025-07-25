@@ -1,0 +1,15 @@
+
+------------ Test 01 Recap ------------
+toList()	.collect(Collectors.toList())	Collects elements into a List
+toSet() 	.collect(Collectors.toSet())	Collects elements into a Set
+toMap() 	.collect(Collectors.toMap(k,v))	Collects elements into a Map
+groupingBy()	.collect(Collectors.groupingBy(k))	Groups elements by key
+
+
+
+
+
+
+
+
+
