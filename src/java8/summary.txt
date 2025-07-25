@@ -5,11 +5,15 @@ toSet() 	.collect(Collectors.toSet())	Collects elements into a Set
 toMap() 	.collect(Collectors.toMap(k,v))	Collects elements into a Map
 groupingBy()	.collect(Collectors.groupingBy(k))	Groups elements by key
 
+------------ Test 02 Recap ------------
+Collector's methods
+joining()	    Concatenate strings
+counting()  	Count elements
+summingInt()	Sum of integer properties
+averagingInt()	Average of integer properties
 
-
-
-
-
-
-
-
+Variations of joining      //input = ("A", "B", "C");
+Type	                   Example Code	                Example Output
+No delimiter	           .joining()	                 ABC
+With delimiter	           .joining(",")	             A,B,C
+Delimiter + Prefix/Suffix	.joining(",", "[", "]")	     [A,B,C]
