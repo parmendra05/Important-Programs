@@ -17,3 +17,12 @@ Type	                   Example Code	                Example Output
 No delimiter	           .joining()	                 ABC
 With delimiter	           .joining(",")	             A,B,C
 Delimiter + Prefix/Suffix	.joining(",", "[", "]")	     [A,B,C]
+
+------------ Test 03 Recap ------------
+Feature          ->    	 Description
+groupingBy(f)	 ->      Groups stream elements by a function f
+groupingBy(f, counting())  -> 	Groups and counts elements
+groupingBy(f, mapping(g, toList()))	  ->  Groups and transforms
+groupingBy(f, groupingBy(g))          ->  Nested grouping
+
+mapping(f, toList())	      ->  Transforms a stream of elements into another type
