@@ -26,3 +26,21 @@ groupingBy(f, mapping(g, toList()))	  ->  Groups and transforms
 groupingBy(f, groupingBy(g))          ->  Nested grouping
 
 mapping(f, toList())	      ->  Transforms a stream of elements into another type
+
+------------ Test 04 Recap ------------
+partitioningBy() methods of Collectors.
+
+partitioningBy(Predicate)	    ->      Simple partition into two lists	  || Return Type > Map<Boolean, List<T>>
+partitioningBy(Predicate, Collector) -> Partition and apply downstream collector || Return Type > Map<Boolean, D>
+
+summarizingInt()	->	Return Type > IntSummaryStatistics
+summarizingLong()	->	Return Type > LongSummaryStatistics
+summarizingDouble()	->	Return Type > DoubleSummaryStatistics
+
+All three classes (IntSummaryStatistics, LongSummaryStatistics, DoubleSummaryStatistics) provide:
+Method	    -> Description
+getCount()	-> Number of elements processed
+getSum()	-> Sum of values
+getMin()	-> Minimum value
+getMax()	-> Maximum value
+getAverage()	-> Average of values (returns double)
